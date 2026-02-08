@@ -20,7 +20,7 @@ env:
 
 jobs:
   Build_x64:
-    runs-on: windows-2019
+    runs-on: windows-2022
     timeout-minutes: 45
 
     steps:
@@ -37,7 +37,8 @@ jobs:
 
       - name: Setup msbuild
         uses: microsoft/setup-msbuild@v2
-
+        with:
+          vs-version: '17.0'
     #
     # Compile Sandboxie Core
     #
